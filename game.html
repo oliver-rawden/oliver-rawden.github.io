@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Number Game</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+margin-top: 50px;
+}
+#result {
+margin-top: 20px;
+font-size: 24px;
+color: green;
+}
+.hidden {
+display: none;
+}
+</style>
+</head>
+<body>
+
+<h1>Guess the Number!</h1>
+<p>Guess a number between 1 and 100</p>
+<input type="number" id="guessInput" placeholder="Enter your guess" min="1"
+max="100">
+<button onclick="submitGuess()">Submit Guess</button>
+<button onclick="resetGame()">Reset Game</button>
+<input type="button" onclick="location.href='/C:/Users/21.o.rawden/OneDrive%20-%20The%20King\'s%20School%20Grantham/My%20website%20-%20Copy/index.html';" value="Go to home" />
+<div id="result"></div>
+<script>
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+let resultDisplay = document.getElementById('result');
+function submitGuess() {
+let userGuess = parseInt(document.getElementById('guessInput').value);
+if (isNaN(userGuess)) {
+resultDisplay.innerText = 'Please enter a valid number!';
+return;
+}
+if (userGuess < 1 || userGuess > 100) {
+resultDisplay.innerText = 'Guess must be between 1 and 100!';
+return;
+}
+if (userGuess < randomNumber) {
+resultDisplay.innerText = 'Too low!';
+} else if (userGuess > randomNumber) {
+resultDisplay.innerText = 'Too high!';
+} else {
+resultDisplay.innerText = 'Congratulations! You guessed it right!';
+}
+}
+function resetGame() {
+randomNumber = Math.floor(Math.random() * 100) + 1;
+document.getElementById('guessInput').value = '';
+resultDisplay.innerText = '';
+}
+</script>
+</body>
+</html>
