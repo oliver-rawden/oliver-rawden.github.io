@@ -18,7 +18,8 @@
             padding: 40px; /* Increased padding for the menu bar */
             background-color: #f8f8f8; /* Background color for the menu bar */
             border-bottom: 2px solid #ccc; /* Border at the bottom for separation */
-            overflow: auto; /* Clear floats */
+            overflow: visible; /* Clear floats */
+            position: relative;
         }
         .menuholder1 a {
             display: inline-block; /* Display buttons horizontally */
@@ -33,9 +34,28 @@
             overflow: hidden; /* Ensure content does not overflow */
             white-space: nowrap; /* Prevent text from wrapping */
             font-size: 18px; /* Increased font size */
+            position: relative;
         }
         .menuholder1 .menu_594a0821_mainMenuEntry:hover {
             background-color: #d0d0d0; /* Adjusted hover effect */
+        }
+        .menuholder1 .menu_594a0821_mainMenuEntry .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #e0e0e0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .menuholder1 .menu_594a0821_mainMenuEntry:hover .submenu {
+            display: block;
+        }
+        .submenu a {
+            display: block;
+            padding: 10px 20px;
+            white-space: nowrap;
         }
         .style4 {
             text-align: left;
@@ -90,14 +110,14 @@
                 </div>
             </a>
             <a href="/ideas.html">
-                <div id="menuentry_49ec4bae" class="style7 menu_594a0821_mainMenuEntry normalEntry">
+                <div id="menuentry_ideas" class="style8 menu_594a0821_mainMenuEntry normalEntry">
                     <div class="style4">
                         <span class="textstyle4">Website idea submission</span>
                     </div>
                 </div>
             </a>
             <a href="/contact.html">
-                <div id="menuentry_contact" class="style8 menu_594a0821_mainMenuEntry normalEntry">
+                <div id="menuentry_contact" class="style9 menu_594a0821_mainMenuEntry normalEntry">
                     <div class="style4">
                         <span class="textstyle4">Contact Us</span>
                     </div>
