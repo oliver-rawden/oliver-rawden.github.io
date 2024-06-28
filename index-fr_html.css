@@ -1,0 +1,23 @@
+a { color:#5D5D9E; } 
+a:visited { color:#5D5D9E; } 
+a:active { color:#5C615E; } 
+a:hover { color:#B2B3B4; } 
+body { background-color:#FFFFFF; padding:0;  margin: 0; }
+.textstyle1 { text-align:left; }
+#button_276db422 { box-sizing: border-box; border-radius: 9px; position:absolute; left:25%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+.vcenterstyle1 { display: table; width: 100%; height: 100%; }
+.vcenterstyle2 { display: table-cell; vertical-align: middle; }
+.textstyle2 { text-align:center; }
+.textstyle3 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#FFFFFF;  }
+#button_54323429 { box-sizing: border-box; border-radius: 9px; position:absolute; left:13%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+#container_5a940f7f { box-sizing: border-box; vertical-align: top; border-radius: 9px; position:relative; display: inline-block; width:100%; min-height:144px; background-color:#BDBDBD; background: linear-gradient(to bottom, #F5F5F5, #BDBDBD); border: 1px solid #545454;  }
+#container_5a940f7f_padding { margin: 10px; display: block;  }
+.textstyle4 { font-size:72pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+#text_304cc980 { position:absolute; left:18%; top:27%; background:none;  }
+.textstyle5 { font-size:12pt; font-family:Arial, Helvetica, sans-serif; color:#000000;  }
+#button_59a0caff { box-sizing: border-box; border-radius: 9px; position:absolute; left:49%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+#button_78d6203e { box-sizing: border-box; border-radius: 9px; position:absolute; left:37%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+#button_91ac625 { box-sizing: border-box; border-radius: 9px; position:absolute; left:73%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+#button_65637dac { box-sizing: border-box; border-radius: 9px; position:absolute; left:61%; top:20%; width:150px; height:40px; background-color:#636CA0; background: linear-gradient(to bottom,#636CA0, #2C3048 50%, #222538 50%, #181B28); border: 2px solid #34384C;  }
+#button_95f5da2 { border-radius: 5px; position:absolute; left:1%; top:89%; width:150px; height:40px; background-color:#808080;  }
+#text_768882c7 { position:absolute; left:2%; top:86%; background:none;  }
