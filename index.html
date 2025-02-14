@@ -13,17 +13,26 @@
             padding: 0;
             box-sizing: border-box;
         }
-
-        body {
+        html, body {
             height: 100%;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #111111; /* Black background */
+            color: #FFFFFF; /* White text */
+            font-family: Arial, sans-serif;
+            text-align: center;
             display: flex;
             flex-direction: column;
-            align-items: center;
         }
 
+        #content {
+            flex: 1; /* Makes content take up all available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
         /* Heading */
         .textstyle4 {
