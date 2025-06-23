@@ -1,1 +1,79 @@
-#TODO
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1e1e1e;
+      color: #ccc;
+      overflow-x: hidden;
+    }
+
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #222, #111);
+      border-bottom: 2px solid #555;
+    }
+
+    header h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      color: #f0f0f0;
+      letter-spacing: 0.2rem;
+      text-decoration: underline; /* Added: Underline the main title */
+    }
+
+    section {
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 100vh;
+      border-bottom: 1px solid #333;
+      transition: all 1s ease;
+    }
+
+    section img {
+      width: 40vw;
+      height: auto;
+      border: 2px solid #555;
+      clip-path: polygon(0 0, 100% 10%, 90% 100%, 0% 90%);
+    }
+
+    section .text {
+      max-width: 40vw;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #aaa;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+
+    section.visible .text {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Linux</h1>
+  </header>
+</body>  
+  
+</head>
+</html>
