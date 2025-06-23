@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
+  <title>Industrial Home Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -66,18 +66,53 @@
       transform: translateY(0);
       opacity: 1;
     }
+
+    .artemis-page {
+      height: 100vh;
+      background: linear-gradient(135deg, #111, #000);
+      color: #c60a0a;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .artemis-page h1 {
+      font-size: 5rem;
+      text-transform: uppercase;
+      color: #c60a0a;
+      letter-spacing: 0.25rem;
+    }
+
+    .side-text {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: left top;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      color: #c60a0a;
+      white-space: nowrap;
+    }
+
+    .side-text span {
+      opacity: 0;
+      transition: opacity 0.05s linear;
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Oliver Rawden</h1>
+    <h1>Steel Works</h1>
   </header>
 
   <section>
     <img src="https://source.unsplash.com/800x600/?factory,metal" alt="Factory" />
     <div class="text">
-      <h2>Project Artemis</h2>
-      <p>One of my personal projects, Artemis is an on-device large language model.</p>
+      <h2>Precision Engineering</h2>
+      <p>Our facilities are equipped with cutting-edge tools to manufacture precision components with industrial-grade efficiency.</p>
     </div>
   </section>
 
@@ -97,6 +132,11 @@
     </div>
   </section>
 
+  <section class="artemis-page">
+    <div class="side-text" id="typed-text"></div>
+    <h1>Artemis</h1>
+  </section>
+
   <script>
     const sections = document.querySelectorAll('section');
 
@@ -113,6 +153,36 @@
     sections.forEach(section => {
       observer.observe(section);
     });
+
+    // Typing effect for Artemis side-text
+    const artemisSection = document.querySelector('.artemis-page');
+    const typedText = document.getElementById('typed-text');
+    const phrase = 'Autonomous Real Time Enhanced Machine Intelligence System';
+    const chars = phrase.split('');
+
+    chars.forEach(char => {
+      const span = document.createElement('span');
+      span.textContent = char;
+      typedText.appendChild(span);
+    });
+
+    const typeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const spans = typedText.querySelectorAll('span');
+          spans.forEach((span, i) => {
+            setTimeout(() => {
+              span.style.opacity = 1;
+            }, i * 50);
+          });
+          typeObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    typeObserver.observe(artemisSection);
   </script>
 </body>
 </html>
