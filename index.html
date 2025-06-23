@@ -1,171 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="generator" content="RocketCake">
-    <title>Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            background-color: #111111; /* Black background */
-            color: #FFFFFF; /* White text */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Industrial Home Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        #content {
-            flex: 1; /* Makes content take up all available space */
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #1e1e1e;
+      color: #ccc;
+      overflow-x: hidden;
+    }
 
-        /* Heading */
-        .textstyle4 {
-            font-size: 2em;
-            font-weight: bold;
-            font-family: 'Russo One', sans-serif;
-            color: #FFFFFF;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    header {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #222, #111);
+      border-bottom: 2px solid #555;
+    }
 
-        /* Text */
-        .textstyle5 {
-            font-size: 1.2em;
-            color: #FFFFFF;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    header h1 {
+      font-size: 4rem;
+      text-transform: uppercase;
+      color: #f0f0f0;
+      letter-spacing: 0.2rem;
+    }
 
-        .TextStyleSub {
-            font-size: 0.5em;
-            color: #FFFFFF;
-            text-align: center;
-            margin-bottom: 10px;
-        }
+    section {
+      padding: 4rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-height: 100vh;
+      border-bottom: 1px solid #333;
+      transition: all 1s ease;
+    }
 
-        /* Links and Buttons */
-        a {
-            text-decoration: none;
-        }
+    section img {
+      width: 40vw;
+      height: auto;
+      border: 2px solid #555;
+      clip-path: polygon(0 0, 100% 10%, 90% 100%, 0% 90%);
+    }
 
-        .button-container {
-            margin: 10px 0;
-            display: block;
-            text-align: center;
-        }
+    section .text {
+      max-width: 40vw;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #aaa;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
 
-        .button {
-            display: inline-block;
-            background-color: #c60a0a; /* Red background */
-            color: #FFFFFF; /* White text */
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.1em;
-            text-align: center;
-            transition: background-color 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: #a80505; /* Darker red for hover effect */
-        }
-
-        /* Centered container for content */
-        #container_5a940f7f {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .vcenterstyle1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .vcenterstyle2 {
-            display: inline-block;
-        }
-
-        .textstyle2 {
-            font-size: 1.2em;
-        }
-
-        .textstyle3 {
-            font-size: 1.2em;
-        }
-
-        .textstyle1 {
-            font-size: 1em;
-            color: #FFFFFF;
-        }
-    </style>
+    section.visible .text {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Steel Works</h1>
+  </header>
 
-    <div class="textstyle4">Rawden's website</div>
+  <section>
+    <img src="https://source.unsplash.com/800x600/?factory,metal" alt="Factory" />
+    <div class="text">
+      <h2>Precision Engineering</h2>
+      <p>Our facilities are equipped with cutting-edge tools to manufacture precision components with industrial-grade efficiency.</p>
+    </div>
+  </section>
 
-    <div id="container_5a940f7f">
-        <div class="textstyle2">
-            <span class="textstyle4">Welcome to the homepage</span>
-        </div>
+  <section>
+    <img src="https://source.unsplash.com/800x600/?industrial,robotics" alt="Robotics" />
+    <div class="text">
+      <h2>Automation & Robotics</h2>
+      <p>Leveraging smart robotics and automated systems to drive innovation and reduce downtime in complex workflows.</p>
     </div>
+  </section>
 
-    <div id="container_5a940f7f">
-        <div class="textstyle5">
-            <p>Interested in Linux?</p>
-        </div>
+  <section>
+    <img src="https://source.unsplash.com/800x600/?steel,structure" alt="Steel Structure" />
+    <div class="text">
+      <h2>Structural Integrity</h2>
+      <p>Built to last. Our materials and designs meet the highest industry standards for durability and reliability.</p>
     </div>
-    
-    <div class="button-container">
-        <a href="/Arch-linux.html">
-            <div class="button">Arch Linux</div>
-        </a>
-    </div>
-    
-    <div class="button-container">
-        <a href="/game.html">
-            <div class="button">The Number Guessing Game</div>
-        </a>
-    </div>
-    
-    <div class="button-container">
-        <a href="/p-artemis.html">
-            <div class="button">Project Artemis</div>
-        </a>
-    </div>
-    
-    <div class="button-container">
-        <a href="/ideas.html">
-            <div class="button">Idea Submission</div>
-        </a>
-    </div>
-    
-    <div class="button-container">
-        <a href="/info.html">
-            <div class="button">Extra information</div>
-        </a>
-    </div>
+  </section>
 
-    <div id="text_304cc980">
-        <div class="TextStyleSub">
-            <span class="textstyle5">This website is hosted on GitHub. If for any reason the webpage does not load or it crashes, please reload the page.</span>
-        </div>
-    </div>
+  <script>
+    const sections = document.querySelectorAll('section');
 
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
 </body>
 </html>
