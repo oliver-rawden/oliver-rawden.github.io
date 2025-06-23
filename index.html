@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home </title>
+  <title>Industrial Home Page</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -73,8 +73,10 @@
       color: #c60a0a;
       position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
     .artemis-page h1 {
@@ -82,24 +84,21 @@
       text-transform: uppercase;
       color: #c60a0a;
       letter-spacing: 0.25rem;
+      margin-bottom: 2rem;
     }
 
-    .side-text {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-      transform-origin: left top;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.2rem;
+    .acrostic {
+      display: flex;
+      flex-direction: column;
       color: #c60a0a;
-      white-space: nowrap;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
     }
 
-    .side-text span {
+    .acrostic span {
       opacity: 0;
-      transition: opacity 0.05s linear;
+      transition: opacity 0.1s linear;
     }
   </style>
 </head>
@@ -133,8 +132,16 @@
   </section>
 
   <section class="artemis-page">
-    <div class="side-text" id="typed-text"></div>
     <h1>Artemis</h1>
+    <div class="acrostic" id="acrostic-text">
+      <span>A - Autonomous</span>
+      <span>R - Real</span>
+      <span>T - Time</span>
+      <span>E - Enhanced</span>
+      <span>M - Machine</span>
+      <span>I - Intelligence</span>
+      <span>S - System</span>
+    </div>
   </section>
 
   <script>
@@ -154,35 +161,26 @@
       observer.observe(section);
     });
 
-    // Typing effect for Artemis side-text
-    const artemisSection = document.querySelector('.artemis-page');
-    const typedText = document.getElementById('typed-text');
-    const phrase = 'Autonomous Real Time Enhanced Machine Intelligence System';
-    const chars = phrase.split('');
+    // Acrostic animation
+    const acrosticSection = document.querySelector('.artemis-page');
+    const acrosticLines = document.querySelectorAll('#acrostic-text span');
 
-    chars.forEach(char => {
-      const span = document.createElement('span');
-      span.textContent = char;
-      typedText.appendChild(span);
-    });
-
-    const typeObserver = new IntersectionObserver(entries => {
+    const acrosticObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const spans = typedText.querySelectorAll('span');
-          spans.forEach((span, i) => {
+          acrosticLines.forEach((line, i) => {
             setTimeout(() => {
-              span.style.opacity = 1;
-            }, i * 50);
+              line.style.opacity = 1;
+            }, i * 300);
           });
-          typeObserver.unobserve(entry.target);
+          acrosticObserver.unobserve(entry.target);
         }
       });
     }, {
       threshold: 0.5
     });
 
-    typeObserver.observe(artemisSection);
+    acrosticObserver.observe(acrosticSection);
   </script>
 </body>
 </html>
